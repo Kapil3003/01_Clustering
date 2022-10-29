@@ -14,14 +14,14 @@ import plotly as py
 import plotly.graph_objs as go
 import pickle
 
-# import warnings
-# import os
-# warnings.filterwarnings("ignore")
-# pd.options.mode.chained_assignment = None  # default='warn'
-# pd.set_option('max_colwidth', 150)
-# st.set_page_config(layout="wide")
+import warnings
+import os
+warnings.filterwarnings("ignore")
+pd.options.mode.chained_assignment = None  # default='warn'
+pd.set_option('max_colwidth', 150)
+st.set_page_config(layout="wide")
 
-
+"Hi"
 # @st.cache
 # def load_data():
 	
