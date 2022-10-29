@@ -50,7 +50,7 @@ def load_plotly_fig():
 
 	df = Data
 	
-	st.write("hello)
+	st.write("hello")
 	dbtrace = go.Scatter3d(
 	    x= df['Age'],
 	    y= df['Spending Score (1-100)'],
