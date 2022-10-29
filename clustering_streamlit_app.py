@@ -46,12 +46,12 @@ df = Data
 
 
 @st.cache(allow_output_mutation=True) # hash_funcs because dict can't be hashed
-def load_plotly_fig():
+def load_plotly_fig(df):
 
 	data_kmeans = [1]
 	data_db = [1]
 	data_layout = [1]
-	df = Data
+	
 	
 # 	st.write("hello")
 # 	dbtrace = go.Scatter3d(
@@ -109,7 +109,7 @@ def load_plotly_fig():
 	
 	return data_kmeans,data_db,data_layout
 
-data_kmeans,data_db,data_layout = load_plotly_fig()
+data_kmeans,data_db,data_layout = load_plotly_fig(df)
 
 # fig_kmeans = go.Figure(data=data_kmeans, layout=data_layout[0])
 # fig_dbscan = go.Figure(data=data_db, layout=data_layout[0])
