@@ -111,39 +111,39 @@ def load_plotly_fig(df):
 
 data_kmeans,data_db,data_layout = load_plotly_fig(df)
 
-# fig_kmeans = go.Figure(data=data_kmeans, layout=data_layout[0])
-# fig_dbscan = go.Figure(data=data_db, layout=data_layout[0])
-# ### EDA Figures
+fig_kmeans = go.Figure(data=data_kmeans, layout=data_layout[0])
+fig_dbscan = go.Figure(data=data_db, layout=data_layout[0])
+### EDA Figures
 
 
-# @st.cache(hash_funcs={matplotlib.figure.Figure: lambda _: None})
-# def mk_figure():
-# 	fig_num = 1
-# 	parameter_distribution = plt.figure(fig_num , figsize = (15 , 6))
-# 	n = 0 
-# 	for x in ['Age' , 'Annual Income (k$)' , 'Spending Score (1-100)']:
-# 	    n += 1
-# 	    plt.subplot(1 , 3 , n)
-# 	    plt.subplots_adjust(hspace =0.5 , wspace = 0.5)
-# 	    sns.distplot(df[x] , bins = 20)
-# 	    plt.title('Distplot of {}'.format(x))
+@st.cache(hash_funcs={matplotlib.figure.Figure: lambda _: None})
+def mk_figure(df,df1):
+	fig_num = 1
+	parameter_distribution = plt.figure(fig_num , figsize = (15 , 6))
+	n = 0 
+	for x in ['Age' , 'Annual Income (k$)' , 'Spending Score (1-100)']:
+	    n += 1
+	    plt.subplot(1 , 3 , n)
+	    plt.subplots_adjust(hspace =0.5 , wspace = 0.5)
+	    sns.distplot(df[x] , bins = 20)
+	    plt.title('Distplot of {}'.format(x))
 
-# 	fig_num +=1
+	fig_num +=1
 
 
 	
-# 	gender_plot = plt.figure(fig_num , figsize = (15 , 5))
-# 	sns.countplot(y = 'Gender' , data = df)	
-# 	fig_num +=1
+	gender_plot = plt.figure(fig_num , figsize = (15 , 5))
+	sns.countplot(y = 'Gender' , data = df)	
+	fig_num +=1
 
 
-# 	pairplot = sns.pairplot(df1)
+	pairplot = sns.pairplot(df1)
 
 
 
-# 	return parameter_distribution,gender_plot,pairplot
+	return parameter_distribution,gender_plot,pairplot
 
-# parameter_distribution,gender_plot,pairplot = mk_figure()
+parameter_distribution,gender_plot,pairplot = mk_figure(df,df1)
 
 # ########################## Page UI #####################
 
