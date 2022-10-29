@@ -71,39 +71,39 @@ def load_plotly_fig(df):
 	     )
 	)
 
-# 	kmeanstrace = go.Scatter3d(
-# 	    x= df['Age'],
-# 	    y= df['Spending Score (1-100)'],
-# 	    z= df['Annual Income (k$)'],
-# 	    mode='markers',
-# 	    name= "Kmeans - original data",
-# 	     marker=dict(
-# 	        color = df['label3'], 
-# 	        size= 10,
-# 	        line=dict(
-# 	            color= df['label3'],
-# 	            width= 12
-# 	        ),
-# 	        opacity=0.8
-# 	     )
-# 	)
+	kmeanstrace = go.Scatter3d(
+	    x= df['Age'],
+	    y= df['Spending Score (1-100)'],
+	    z= df['Annual Income (k$)'],
+	    mode='markers',
+	    name= "Kmeans - original data",
+	     marker=dict(
+	        color = df['label3'], 
+	        size= 10,
+	        line=dict(
+	            color= df['label3'],
+	            width= 12
+	        ),
+	        opacity=0.8
+	     )
+	)
 
-# 	layout = go.Layout(
+	layout = go.Layout(
 
-# 	#     )
-# 		height=600,
-# 		template="plotly_dark",
-# 	    #title= 'DBScan Clusters',
-# 	    scene = dict(
-# 	            xaxis = dict(title  = 'Age'),
-# 	            yaxis = dict(title  = 'Spending Score'),
-# 	            zaxis = dict(title  = 'Annual Income')
-# 	        )
-# 	)
+	#     )
+		height=600,
+		template="plotly_dark",
+	    #title= 'DBScan Clusters',
+	    scene = dict(
+	            xaxis = dict(title  = 'Age'),
+	            yaxis = dict(title  = 'Spending Score'),
+	            zaxis = dict(title  = 'Annual Income')
+	        )
+	)
 
-# 	data_kmeans = [kmeanstrace]
-# 	data_db = [dbtrace]
-# 	data_layout = [layout]
+	data_kmeans = [kmeanstrace]
+	data_db = [dbtrace]
+	data_layout = [layout]
 
 
 	
