@@ -51,7 +51,7 @@ def load_plotly_fig():
 	data_kmeans = [1]
 	data_db = [1]
 	data_layout = [1]
-# 	df = Data
+	df = Data
 	
 # 	st.write("hello")
 # 	dbtrace = go.Scatter3d(
