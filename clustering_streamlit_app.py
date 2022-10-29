@@ -38,7 +38,7 @@ df1 = df1.drop('CustomerID',axis=1)
 
 
 
-"Hi"
+
 # ###################### Data Calculations #####################
 fig_num = 1
 df = Data
