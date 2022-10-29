@@ -147,115 +147,115 @@ parameter_distribution,gender_plot,pairplot = mk_figure(df,df1)
 
 # ########################## Page UI #####################
 
-# ### Overview of Project
-# tab1, tab2, tab3 = st.tabs([ "WebApp","Project Overview", "Methodology"])
+### Overview of Project
+tab1, tab2, tab3 = st.tabs([ "WebApp","Project Overview", "Methodology"])
 
-# with tab1:
-# 	" # Web App "
-# 	" This web app shows you clustering done by two algorithms for customer segmentation of a mall"
-# 	" Even though this is not an implementation of classification algorithm, you can play with the input parameters to see where does the customer stands in comaparison with other customers"
-# 	"---"
-# 	col_1, col_2, col_3 = st.columns(3)
+with tab1:
+	" # Web App "
+	" This web app shows you clustering done by two algorithms for customer segmentation of a mall"
+	" Even though this is not an implementation of classification algorithm, you can play with the input parameters to see where does the customer stands in comaparison with other customers"
+	"---"
+	col_1, col_2, col_3 = st.columns(3)
 
-# 	with col_1:
-# 		#name = st.text_input("What is your name ?")
-# 		Spending_Score = st.slider('Customer Spending Score', 0, 100, 35)
-# 	with col_2:
-# 		age = st.slider('Age of the Customer? ', 15, 70, 35)		
-# 	with col_3:
-# 		income = st.slider('Annual income of the customer in k$?', 15, 135, 60)	
+	with col_1:
+		#name = st.text_input("What is your name ?")
+		Spending_Score = st.slider('Customer Spending Score', 0, 100, 35)
+	with col_2:
+		age = st.slider('Age of the Customer? ', 15, 70, 35)		
+	with col_3:
+		income = st.slider('Annual income of the customer in k$?', 15, 135, 60)	
 
-# 	col_10, col_20 = st.columns(2)
-# 	current_point = go.Scatter3d(
-# 	    x= [age],
-# 	    y= [Spending_Score],
-# 	    z= [income],
-# 	    mode='markers',
-# 	    name= "Your Selection",
-# 	     marker=dict(
-# 	        color = "orange", 
-# 	        size= 20,
-# 	        opacity=1
-# 	     )
-# 	)
-
-
-# 	fig_dbscan.add_trace(current_point)
-# 	fig_kmeans.add_trace(current_point)
-
-# 	with col_10:
-# 		'### Kmeans'
-# 		" Yellow markers are highly valued customers - young, high earning with high spending score"
-# 		st.plotly_chart(fig_kmeans, use_container_width=True)
-# 	with col_20:
-# 		'### DBscan'
-# 		" Purple markers are highly valued customers - young, high earning with high spending score"
-# 		st.plotly_chart(fig_dbscan, use_container_width=True)
+	col_10, col_20 = st.columns(2)
+	current_point = go.Scatter3d(
+	    x= [age],
+	    y= [Spending_Score],
+	    z= [income],
+	    mode='markers',
+	    name= "Your Selection",
+	     marker=dict(
+	        color = "orange", 
+	        size= 20,
+	        opacity=1
+	     )
+	)
 
 
+	fig_dbscan.add_trace(current_point)
+	fig_kmeans.add_trace(current_point)
+
+	with col_10:
+		'### Kmeans'
+		" Yellow markers are highly valued customers - young, high earning with high spending score"
+		st.plotly_chart(fig_kmeans, use_container_width=True)
+	with col_20:
+		'### DBscan'
+		" Purple markers are highly valued customers - young, high earning with high spending score"
+		st.plotly_chart(fig_dbscan, use_container_width=True)
 
 
 
-# with tab2:
-# 	"## Project Overview"
-# 	"This is the first project in the ML for Data science series. The aim of this project is to"
-# 	"- Explore basic python and ML libraries - to perfrom Data manipulation, visualization, Exploratory Data Analysis and model training/building"
-# 	"- Explore basic clustering algo like kmeans and DBscan"
-# 	"- Explore how to build streamlit app and deploy trained models on heroku server."
-
-# 	st.info(' Main Aim is to understand how the data science pipeline works and get used to basic tools, and not to build accurate model')
-
-# 	"---"
-# 	'## Sources'
-# 	"[Kaggle DataSet](https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python)"
-# 	"[Github](https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python)"
-
-# 	# "---"
-# 	# "- Checkout the app in WebApp tab"
-# 	# "- Checkout the step by step analysis in Methodology tab"
-# 	"---"
-
-# 	" ## Other Projects on this series"
-# 	" 2. [An Internal Link](/guides/content/editing-an-existing-page)"
-# 	" 3. [An Internal Link](/guides/content/editing-an-existing-page)"
-# 	" 4. [An Internal Link](/guides/content/editing-an-existing-page)"
-
-# with tab3:
-
-# 	"# Problem Statement"
 
 
+with tab2:
+	"## Project Overview"
+	"This is the first project in the ML for Data science series. The aim of this project is to"
+	"- Explore basic python and ML libraries - to perfrom Data manipulation, visualization, Exploratory Data Analysis and model training/building"
+	"- Explore basic clustering algo like kmeans and DBscan"
+	"- Explore how to build streamlit app and deploy trained models on heroku server."
 
-# 	"We want to segment highspending value customers for the mall. As data is just 3D and highly intuitive, it is common sense that we need to target younger people with high salary and high spending score."
-# 	'Building ML model for this data and problem doesnt make sense- but the aim is not to build accurate model. Aim is to understand how the data science pipeline works and get used to basic tools. Lets see if our model can cluster these highly imp customers.'
-# 	'The main aim of the projects is to get understanding of all the basic libraries required to perform EDA and Feature Engineering, ML model building/Training, developing and deploying web app. As with the successful clustering,plotting,developing streamlit app and deploying it on the server has acheived this purpose'
+	st.info(' Main Aim is to understand how the data science pipeline works and get used to basic tools, and not to build accurate model')
 
-# 	"---"
-# 	"#### DataSet"
-# 	st.table(df1.head())
-# 	st.write("Shape of the data" , df1.shape)
+	"---"
+	'## Sources'
+	"[Kaggle DataSet](https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python)"
+	"[Github](https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python)"
 
-# 	'### Exploratory Data Analysis'
-# 	col_10, col_20 = st.columns([3, 1])
-# 	with col_10:
-# 		st.pyplot(parameter_distribution,use_container_width=True)
+	# "---"
+	# "- Checkout the app in WebApp tab"
+	# "- Checkout the step by step analysis in Methodology tab"
+	"---"
 
-# 	with col_20:
-# 		" Distribution plot of all three numeric parameters signify that the data is normally distributed"
+	" ## Other Projects on this series"
+	" 2. [An Internal Link](/guides/content/editing-an-existing-page)"
+	" 3. [An Internal Link](/guides/content/editing-an-existing-page)"
+	" 4. [An Internal Link](/guides/content/editing-an-existing-page)"
 
-# 	col_10, col_20 = st.columns([3, 1])
-# 	with col_10:
-# 		st.pyplot(gender_plot)
+with tab3:
 
-# 	with col_20:
-# 		" We understand that the numbber of Female are more than that of male but still the data is fairly balanced"		
+	"# Problem Statement"
+
+
+
+	"We want to segment highspending value customers for the mall. As data is just 3D and highly intuitive, it is common sense that we need to target younger people with high salary and high spending score."
+	'Building ML model for this data and problem doesnt make sense- but the aim is not to build accurate model. Aim is to understand how the data science pipeline works and get used to basic tools. Lets see if our model can cluster these highly imp customers.'
+	'The main aim of the projects is to get understanding of all the basic libraries required to perform EDA and Feature Engineering, ML model building/Training, developing and deploying web app. As with the successful clustering,plotting,developing streamlit app and deploying it on the server has acheived this purpose'
+
+	"---"
+	"#### DataSet"
+	st.table(df1.head())
+	st.write("Shape of the data" , df1.shape)
+
+	'### Exploratory Data Analysis'
+	col_10, col_20 = st.columns([3, 1])
+	with col_10:
+		st.pyplot(parameter_distribution,use_container_width=True)
+
+	with col_20:
+		" Distribution plot of all three numeric parameters signify that the data is normally distributed"
+
+	col_10, col_20 = st.columns([3, 1])
+	with col_10:
+		st.pyplot(gender_plot)
+
+	with col_20:
+		" We understand that the numbber of Female are more than that of male but still the data is fairly balanced"		
 	
 
-# 	col_10, col_20 = st.columns([3, 1])
-# 	with col_10:
-# 		st.pyplot(pairplot)
-# 	with col_20:
-# 		" Correlation plot does not reveal any correlation between any features"
+	col_10, col_20 = st.columns([3, 1])
+	with col_10:
+		st.pyplot(pairplot)
+	with col_20:
+		" Correlation plot does not reveal any correlation between any features"
 
 
 
