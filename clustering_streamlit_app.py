@@ -53,23 +53,23 @@ def load_plotly_fig(df):
 	data_layout = [1]
 	
 	
-# 	st.write("hello")
-# 	dbtrace = go.Scatter3d(
-# 	    x= df['Age'],
-# 	    y= df['Spending Score (1-100)'],
-# 	    z= df['Annual Income (k$)'],
-# 	    mode='markers',
-# 	    name= "DBscan - original data",
-# 	     marker=dict(
-# 	        color = -df['label4'], 
-# 	        size= 10,
-# 	        line=dict(
-# 	            color= -df['label4'],
-# 	            width= 12
-# 	        ),
-# 	        opacity=0.8
-# 	     )
-# 	)
+
+	dbtrace = go.Scatter3d(
+	    x= df['Age'],
+	    y= df['Spending Score (1-100)'],
+	    z= df['Annual Income (k$)'],
+	    mode='markers',
+	    name= "DBscan - original data",
+	     marker=dict(
+	        color = -df['label4'], 
+	        size= 10,
+	        line=dict(
+	            color= -df['label4'],
+	            width= 12
+	        ),
+	        opacity=0.8
+	     )
+	)
 
 # 	kmeanstrace = go.Scatter3d(
 # 	    x= df['Age'],
