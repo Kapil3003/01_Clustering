@@ -21,23 +21,24 @@ pd.options.mode.chained_assignment = None  # default='warn'
 pd.set_option('max_colwidth', 150)
 st.set_page_config(layout="wide")
 
-"Hi"
-# @st.cache
-# def load_data():
+
+@st.cache
+def load_data():
 	
-# 	df1 = pd.read_csv(r'Mall_Customers.csv')
-# 	Data = pd.read_csv ("labelledData.csv")  
-# 	# Dbscan = pickle.load(open("dbscan.pickle", 'rb'))
-# 	# kmeans = pickle.load(open("kmeans.pickle", 'rb'))
-# 	Dbscan = pickle.load(open('db.pkl', 'rb'))
-# 	kmeans = pickle.load(open('kmeans.pkl', 'rb'))
-# 	return df1,Data
+	df1 = pd.read_csv(r'Mall_Customers.csv')
+	Data = pd.read_csv ("labelledData.csv")  
+	# Dbscan = pickle.load(open("dbscan.pickle", 'rb'))
+	# kmeans = pickle.load(open("kmeans.pickle", 'rb'))
+	Dbscan = pickle.load(open('db.pkl', 'rb'))
+	kmeans = pickle.load(open('kmeans.pkl', 'rb'))
+	return df1,Data
 
-# df1,Data= load_data()
-# df1 = df1.drop('CustomerID',axis=1)
+df1,Data= load_data()
+df1 = df1.drop('CustomerID',axis=1)
 
 
 
+"Hi"
 # ###################### Data Calculations #####################
 # fig_num = 1
 # df = Data
