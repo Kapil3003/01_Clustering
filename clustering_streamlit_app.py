@@ -40,72 +40,72 @@ df1 = df1.drop('CustomerID',axis=1)
 
 "Hi"
 # ###################### Data Calculations #####################
-# fig_num = 1
-# df = Data
+fig_num = 1
+df = Data
 
 
 
-# @st.cache(allow_output_mutation=True) # hash_funcs because dict can't be hashed
-# def load_plotly_fig():
+@st.cache(allow_output_mutation=True) # hash_funcs because dict can't be hashed
+def load_plotly_fig():
 
-# 	df = Data
+	df = Data
 
-# 	dbtrace = go.Scatter3d(
-# 	    x= df['Age'],
-# 	    y= df['Spending Score (1-100)'],
-# 	    z= df['Annual Income (k$)'],
-# 	    mode='markers',
-# 	    name= "DBscan - original data",
-# 	     marker=dict(
-# 	        color = -df['label4'], 
-# 	        size= 10,
-# 	        line=dict(
-# 	            color= -df['label4'],
-# 	            width= 12
-# 	        ),
-# 	        opacity=0.8
-# 	     )
-# 	)
+	dbtrace = go.Scatter3d(
+	    x= df['Age'],
+	    y= df['Spending Score (1-100)'],
+	    z= df['Annual Income (k$)'],
+	    mode='markers',
+	    name= "DBscan - original data",
+	     marker=dict(
+	        color = -df['label4'], 
+	        size= 10,
+	        line=dict(
+	            color= -df['label4'],
+	            width= 12
+	        ),
+	        opacity=0.8
+	     )
+	)
 
-# 	kmeanstrace = go.Scatter3d(
-# 	    x= df['Age'],
-# 	    y= df['Spending Score (1-100)'],
-# 	    z= df['Annual Income (k$)'],
-# 	    mode='markers',
-# 	    name= "Kmeans - original data",
-# 	     marker=dict(
-# 	        color = df['label3'], 
-# 	        size= 10,
-# 	        line=dict(
-# 	            color= df['label3'],
-# 	            width= 12
-# 	        ),
-# 	        opacity=0.8
-# 	     )
-# 	)
+	kmeanstrace = go.Scatter3d(
+	    x= df['Age'],
+	    y= df['Spending Score (1-100)'],
+	    z= df['Annual Income (k$)'],
+	    mode='markers',
+	    name= "Kmeans - original data",
+	     marker=dict(
+	        color = df['label3'], 
+	        size= 10,
+	        line=dict(
+	            color= df['label3'],
+	            width= 12
+	        ),
+	        opacity=0.8
+	     )
+	)
 
-# 	layout = go.Layout(
+	layout = go.Layout(
 
-# 	#     )
-# 		height=600,
-# 		template="plotly_dark",
-# 	    #title= 'DBScan Clusters',
-# 	    scene = dict(
-# 	            xaxis = dict(title  = 'Age'),
-# 	            yaxis = dict(title  = 'Spending Score'),
-# 	            zaxis = dict(title  = 'Annual Income')
-# 	        )
-# 	)
+	#     )
+		height=600,
+		template="plotly_dark",
+	    #title= 'DBScan Clusters',
+	    scene = dict(
+	            xaxis = dict(title  = 'Age'),
+	            yaxis = dict(title  = 'Spending Score'),
+	            zaxis = dict(title  = 'Annual Income')
+	        )
+	)
 
-# 	data_kmeans = [kmeanstrace]
-# 	data_db = [dbtrace]
-# 	data_layout = [layout]
+	data_kmeans = [kmeanstrace]
+	data_db = [dbtrace]
+	data_layout = [layout]
 
 
 	
-# 	return data_kmeans,data_db,data_layout
+	return data_kmeans,data_db,data_layout
 
-# data_kmeans,data_db,data_layout = load_plotly_fig()
+data_kmeans,data_db,data_layout = load_plotly_fig()
 
 # fig_kmeans = go.Figure(data=data_kmeans, layout=data_layout[0])
 # fig_dbscan = go.Figure(data=data_db, layout=data_layout[0])
