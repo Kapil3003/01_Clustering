@@ -47,7 +47,7 @@ df = Data
 
 @st.cache(allow_output_mutation=True) # hash_funcs because dict can't be hashed
 def load_plotly_fig():
-
+	st.write("hello")
 	df = Data
 	
 	st.write("hello")
