@@ -228,7 +228,7 @@ with tab2:
 
 with tab3:
 
-	"# Problem Statement"
+	#"# Problem Statement"
 
 	'#### Clustering - Customer Segmentation'
 	'We have a customer data with features like age, income and spending score'
