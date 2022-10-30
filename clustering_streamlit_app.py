@@ -198,6 +198,10 @@ with tab1:
 
 with tab2:
 	"## Project Overview"
+
+	'#### Clustering - Customer Segmentation'
+	'Clustering done by two algorithms for customer segmentation of a mall'
+
 	"This is the first project in the ML for Data science series. The aim of this project is to"
 	"- Explore basic python and ML libraries - to perfrom Data manipulation, visualization, Exploratory Data Analysis and model training/building"
 	"- Explore basic clustering algo like kmeans and DBscan"
@@ -226,8 +230,8 @@ with tab3:
 
 	"# Problem Statement"
 
-
-
+	'#### Clustering - Customer Segmentation'
+	'We have a customer data with features like age, income and spending score'
 	"We want to segment highspending value customers for the mall. As data is just 3D and highly intuitive, it is common sense that we need to target younger people with high salary and high spending score."
 	'Building ML model for this data and problem doesnt make sense- but the aim is not to build accurate model. Aim is to understand how the data science pipeline works and get used to basic tools. Lets see if our model can cluster these highly imp customers.'
 	'The main aim of the projects is to get understanding of all the basic libraries required to perform EDA and Feature Engineering, ML model building/Training, developing and deploying web app. As with the successful clustering,plotting,developing streamlit app and deploying it on the server has acheived this purpose'
