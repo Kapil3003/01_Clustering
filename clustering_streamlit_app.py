@@ -151,7 +151,7 @@ parameter_distribution,gender_plot,pairplot = mk_figure(df,df1)
 tab1, tab2, tab3 = st.tabs([ "WebApp","Project Overview", "Methodology"])
 
 with tab1:
-	" # Clustering - Customer Segmentation "
+	" ## Clustering - Customer Segmentation "
 	" This web app shows you clustering done by two algorithms for customer segmentation of a mall"
 	" Even though this is not an implementation of classification algorithm, you can play with the input parameters to see where does the customer stands in comaparison with other customers"
 	"---"
@@ -197,7 +197,7 @@ with tab1:
 
 
 with tab2:
-	"## Project Overview"
+	#"## Project Overview"
 
 	'#### Clustering - Customer Segmentation'
 	'Clustering done by two algorithms for customer segmentation of a mall'
