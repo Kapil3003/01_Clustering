@@ -13,6 +13,8 @@ import seaborn as sns
 import plotly as py
 import plotly.graph_objs as go
 import pickle
+import sklearn
+
 
 import warnings
 import os
@@ -220,7 +222,8 @@ with tab2:
 	"---"
 
 	" ## Projects"
-	" 1. [Clustering - Customer Segmentation](https://kapil3003-01-clustering-clustering-streamlit-app-43fp3b.streamlitapp.com/)"
+
+	" 1. [[webApp]](https://quantproject1-csovwwndasw9kuk2vpygjp.streamlit.app/)  [Clustering - Customer Segmentation](https://kapil3003-01-clustering-clustering-streamlit-app-43fp3b.streamlitapp.com/)"
 	" 2. [Forecasting - Banglore House Price Prediction](https://kapil3003-02-regression-regression-housepriceprediction-ifckzh.streamlitapp.com/)"
 	" 3. [Binary Classification - Loan Approval Prediction ](https://kapil3003-03-classification-classification-streamlit-app-el6w2c.streamlitapp.com/)"
 	" 4. [Hyper parameter Optimisation - Breast Cancer Prediction](https://github.com/Kapil3003/04_Hyperparameter_Optimization)"
