@@ -22,7 +22,7 @@ pd.set_option('max_colwidth', 150)
 st.set_page_config(layout="wide")
 
 
-@st.cache
+@st.cache_data
 def load_data():
 	
 	df1 = pd.read_csv(r'Mall_Customers.csv')
@@ -45,7 +45,7 @@ df = Data
 
 
 
-@st.cache(allow_output_mutation=True) # hash_funcs because dict can't be hashed
+@st.cache_data() # allow_output_mutation=True hash_funcs because dict can't be hashed
 def load_plotly_fig(df):
 
 	data_kmeans = [1]
@@ -116,7 +116,7 @@ fig_dbscan = go.Figure(data=data_db, layout=data_layout[0])
 ### EDA Figures
 
 
-@st.cache(hash_funcs={matplotlib.figure.Figure: lambda _: None})
+@st.cache_data(hash_funcs={matplotlib.figure.Figure: lambda _: None})
 def mk_figure(df,df1):
 	fig_num = 1
 	parameter_distribution = plt.figure(fig_num , figsize = (15 , 6))
